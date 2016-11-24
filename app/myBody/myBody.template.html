@@ -1,0 +1,44 @@
+
+  <div class="topBody">
+      <div class="searchBox" >
+          <div ui-view="searchBox">
+             <input type="text" class="textBox" ng-model="query"/>
+             <button ui-sref="Home.homeContent.phoneContentView.addWin">Add</button>
+
+          </div>
+          <div class="contentValues">
+                 <div class="companies" >
+                     <ul class="cmpnyList">
+                       <li ng-repeat= "companies in $ctrl.company" ng-click= "change(companies.name)"
+                       ng-init="($first) ? change(companies.name): ''">
+                         {{companies.name}}
+                       </li>
+                     </ul>
+                 </div>
+                 <div class="models">
+                     <ul class='phoneList'>
+                        <li ng-repeat="phones in $ctrl.phone | filter:query">
+                          <a ng-click="breCru(phones.name)"
+                          ng-init="($first) ? init(phones.name,phones.value):''"
+                          ui-sref="Home.homeContent.phoneContentView
+                          ({phName:phones.name,phValue:phones.value})">
+                           {{phones.name}}
+                         </a>
+                        </li>
+                     </ul>
+                 </div>
+          </div>
+      </div>
+
+
+      <div class="breadCrumb" >
+        <div>
+          <label class="breadCrumbLabel" ng-bind="bread">Trial
+          </label>
+        </div>
+        <div class="contentValues2" ui-view="content">
+
+        </div>
+
+      </div>
+  </div>

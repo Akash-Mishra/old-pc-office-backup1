@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <title>Bookmark This!</title>
+     <meta charset="UTF-8">
+     <link type="text/css" rel="stylesheet" href="style.css">
+     <script src="jquery.min.js"></script>
+     <script type="text/javascript" src="script.js"></script>
+     </head>
+
+   <body>
+     <body>
+
+	<h1>Bookmark This!</h1>
+
+  <div id="container">
+
+	    <input id="tab-1" type="radio" name="tab-group" checked="checked" />
+	    <label for="tab-1">Tab 1</label>
+
+	    <input id="tab-2" type="radio" name="tab-group" />
+	    <label for="tab-2">Tab 2</label>
+
+	    <input id="tab-3" type="radio" name="tab-group" />
+	    <label for="tab-3">Bookmark Tab</label>
+
+	    <div id="content">
+
+	        <div id="content-1">
+	            <p class="left">1)Lorem ipsum dolor sit amet</p><a id="bookmarkthis1" href="#" title="Bookmark This Page">Bookmark</a>
+	            <br><br><p class="left last">2)Lorem ipsum dolor sit amet</p><br><a id="bookmarkthis2" href="#" title="Bookmark This Page">Bookmark</a>
+
+	        </div>
+
+	        <div id="content-2">
+	            <p class="column-left">1)Lorem ipsum dolor sit amet</p><a id="bookmarkthis3" href="#" title="Bookmark This Page">Bookmark</a>
+            	<br><br><p class="column-right">2)Lorem ipsum dolor sit amet</p><a id="bookmarkthis4" href="#" title="Bookmark This Page">Bookmark</a>
+
+	        </div>
+
+	        <div id="content-3">
+	        	<!-- <p>Lorem ipsum dolor sit amet</p> -->
+	        	<ul>
+              <select id="tabViewBy">
+                 <option value="tab1">Tab 1</option>
+                 <option value="tab2">Tab 2</option>
+              </select>
+
+
+	        	</ul>
+	        	<!-- <p id="result"></p> -->
+	        </div>
+
+	    </div>
+	</div>
+  <div id="result" style="color:blue;">
+    <!-- <div id="resultTab"> </div> -->
+
+  </div>
+
+
+
+</body>
+
+   </body>
+
+   </html>

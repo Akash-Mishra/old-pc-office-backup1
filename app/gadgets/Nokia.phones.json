@@ -1,0 +1,30 @@
+[
+  {
+    "name" : "Nokia 1100",
+    "value": "nokia_1100"
+  },
+  {
+    "name" : "Nokia Lumia 710",
+    "value" : "nokia_lumia_710"
+  },
+  {
+    "name" : "Nokia Lumia 720",
+    "value" : "nokia_lumia_720"
+  },
+  {
+    "name" : "Nokia Lumia 920",
+    "value" : "nokia_lumia_920"
+  },
+  {
+    "name" : "Nokia Lumia 940",
+    "value" : "nokia_lumia_940"
+  },
+  {
+    "name" : "Nokia Lumia 950",
+    "value" : "nokia_lumia_950"
+  },
+  {
+    "name" : "Nokia Lumia Z2",
+    "value" : "nokia_lumia_z2"
+  }
+]

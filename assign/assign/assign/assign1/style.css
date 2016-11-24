@@ -1,0 +1,10 @@
+body {
+    background-color: lightgrey;
+}
+
+
+.outerBox { height: 80%;
+              width: 70%;
+              background-color: #FFFF00;
+              margin: auto;
+}

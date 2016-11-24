@@ -1,0 +1,29 @@
+<button class="close" ui-sref="Home.homeContent.phoneContentView">
+  &#215;
+</button>
+<div class="newWinView">
+  <div class="imgDiv" ng-model="imag">
+      <img ng-src="{{imageSrc}}" />
+  </div>
+  <div class="cntDiv">
+    <table>
+      <tr>
+         <td><label>name</label></td>
+         <td>: <input type="text"></input></td>
+      </tr>
+      <tr>
+         <td><label>Company</label></td>
+         <td>:  <input type="text"></input></td>
+      </tr>
+      <tr>
+         <td><label>Cost</label></td>
+         <td>:  <input type="text"></input></td>
+      </tr>
+      <tr>
+         <td><label>Image</label></td>
+         <td>:  <input type="file" ng-file-select="onFileSelect($files)"/></td>
+      </tr>
+    </table>
+    <button class="submitBtn" ui-sref="Home.homeContent.phoneContentView">Submit</button>
+  </div>
+</div>

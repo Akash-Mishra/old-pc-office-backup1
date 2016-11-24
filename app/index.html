@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <title>D3 Angular</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="app.css" />
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-ui-router/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-ui-router-extras/ct-ui-router-extras.js"></script>
+    <script src="bower_components/javaScript/upload.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="homeView/homeView.module.js"></script>
+    <script src="homeView/homeView.config.js"></script>
+    <script src="myHead/myHead.module.js"></script>
+    <script src="myHead/myHead.config.js"></script>
+    <script src="myBody/myBody.module.js"></script>
+    <script src="myBody/myBody.config.js"></script>
+    <script src="phnContentView/phnContentView.module.js"></script>
+    <script src="phnContentView/phnContentView.config.js"></script>
+    <script src="winView/winView.module.js"></script>
+    <script src="winView/winView.config.js"></script>
+
+  </head>
+  <body ng-app="d3App" class="container-fluid">
+    <div ui-view="">
+    </div>
+
+  </body>
+</html>

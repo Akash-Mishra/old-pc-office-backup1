@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Bookmark!</title>
+      //<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+      <link href="text/css" rel="stylesheet" href="style.css">
+
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+      <script src="app.js"></script>
+      <style> .glyphicon-thumbs-up { cursor:pointer } </style>
+    </head>
+
+    <body ng-app="Bookmark" ng-controller="MainCtrl">
+
+      <div id="container">
+
+    	    <input id="tab-1" type="radio" name="tab-group" checked="checked" />
+    	    <label for="tab-1">Tab 1</label>
+
+    	    <input id="tab-2" type="radio" name="tab-group" />
+    	    <label for="tab-2">Tab 2</label>
+
+    	    <input id="tab-3" type="radio" name="tab-group" />
+    	    <label for="tab-3">Bookmark Tab</label>
+
+          <div id="content">
+
+    	        <div id="content-1">
+
+      <div class = "row">
+        <div class = "col-md-6 col-md-offset-3">
+
+          <div class = "page-header">
+            <h1>Bookmark</h1>
+          </div>
+
+      <div ng-repeat = "link in links | orderBy: '-upvotes'">
+        <span class = "glyphicon glyphicon-bookmark" ng-click="Bookmark(link)"></span>
+        <!-- {{link.upvotes}} -->
+        <span style="font-size:20px; margin-left:10px;">
+        <!-- <span ng-click="incrementUpvotes(post)">^</span> -->
+        <a ng-show="link.link" href="{{link.link}}">
+          {{link.title}}
+        </a>
+        <span ng-hide="link.link">
+          {{link.title}}
+        </span>
+      </span>
+
+        <!-- - upvotes: {{post.upvotes}} -->
+      </div>
+
+      <form ng-submit="addLink()" style="margin-top:30px;">
+        <h3>Add a new link</h3>
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Title" ng-model="title"></input>
+        </div>
+
+        <!-- <div class="form-group">
+          <input type="text" class="form-control" placeholder="Link" ng-model="link"></input>
+        </div> -->
+        <!--
+        <input type="text" placeholder="title" ng-model="title"></input>
+        <br>
+        <input type="text" placeholder="link" ng-model="link"></input>
+        <br> -->
+        <button type="submit" class="btn btn-primary">Link</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<div id="content-1">
+
+<div class = "row">
+<div class = "col-md-6 col-md-offset-3">
+
+<div class = "page-header">
+<h1>Bookmark</h1>
+</div>
+
+<div ng-repeat = "link in links | orderBy: '-upvotes'">
+<span class = "glyphicon glyphicon-bookmark" ng-click="Bookmark(link)"></span>
+<!-- {{link.upvotes}} -->
+<span style="font-size:20px; margin-left:10px;">
+<!-- <span ng-click="incrementUpvotes(post)">^</span> -->
+<a ng-show="link.link" href="{{link.link}}">
+{{link.title}}
+</a>
+<span ng-hide="link.link">
+{{link.title}}
+</span>
+</span>
+
+<!-- - upvotes: {{post.upvotes}} -->
+</div>
+
+<form ng-submit="addLink()" style="margin-top:30px;">
+<h3>Add a new link</h3>
+
+<div class="form-group">
+<input type="text" class="form-control" placeholder="Title" ng-model="title"></input>
+</div>
+
+<!-- <div class="form-group">
+<input type="text" class="form-control" placeholder="Link" ng-model="link"></input>
+</div> -->
+<!--
+<input type="text" placeholder="title" ng-model="title"></input>
+<br>
+<input type="text" placeholder="link" ng-model="link"></input>
+<br> -->
+<button type="submit" class="btn btn-primary">Link</button>
+</form>
+
+</div>
+</div>
+</div><div id="content-3">
+  <!-- <p>Lorem ipsum dolor sit amet</p> -->
+  <ul>
+    <select id="tabViewBy">
+       <option value="tab1">Tab 1</option>
+       <option value="tab2">Tab 2</option>
+    </select>
+
+
+  </ul>
+  <!-- <p id="result"></p> -->
+</div>
+
+</div>
+</div>
+
+      <!-- <button ng-click="addPost()">Post</button> -->
+
+    </body>
+
+</html>
